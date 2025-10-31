@@ -1,0 +1,26 @@
+{
+  "name": "@my/utils.css",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "npm@10.9.0",
+  "engineStrict": true,
+  "engines": {
+    "node": ">=22.21.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "onFail": "error"
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "exports": {
+    "./reset": "./lib/reset/index.css"
+  },
+  "devDependencies": {
+    "@my/configs.js": "git+https://github.com/HotCherryPie/configs.js.git#semver:v0.0.0-alpha-3"
+  }
+}
