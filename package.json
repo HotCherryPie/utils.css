@@ -21,6 +21,6 @@
     "./reset": "./lib/reset/index.css"
   },
   "devDependencies": {
-    "@my/configs.js": "git+https://github.com/HotCherryPie/configs.js.git#semver:v0.0.0-alpha-3"
+    "@my/configs.js": "git+https://github.com/HotCherryPie/configs.js.git#semver:v0.0.0-alpha-6"
   }
 }
