@@ -9,6 +9,14 @@
       @layer reset;
       @import url('../lib/reset/index.css') layer(reset);
     </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap');
+      :root {
+        font-family: 'Grenze Gotisch', serif;
+        color: #15a900;
+        font-size: 20px;
+      }
+    </style>
   </head>
   <body>
     <div id="top" class="page" role="document">
@@ -69,7 +77,10 @@
           </article>
           <article id="embedded__audio">
             <header><h2>Audio</h2></header>
-            <div><audio controls="">audio</audio></div>
+            <div>
+              <audio controls>audio</audio>
+              <audio src="/shared-assets/audio/t-rex-roar.mp3"></audio>
+            </div>
             <footer>
               <p><a href="#top">[Top]</a></p>
             </footer>

@@ -12,30 +12,24 @@
  */
 
 /* TODO: check for <use> element. */
-:not(math, math *, svg, svg *),
+:not(math *, svg *),
 ::before,
 ::after {
   all: unset;
+
   display: revert-layer;
   -webkit-locale: revert-layer; /* https://github.com/elad2412/the-new-css-reset/issues/36 */
 
   box-sizing: border-box;
-
+  min-width: 0;
   flex-grow: 0;
   flex-shrink: 0;
-
   font-synthesis: none;
   text-box: trim-both cap text;
+
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-
-  /**** Experimental ****/
-  min-width: 0;
-
-  /**** Consider ****/
-  /* unicode-bidi: isolate; */
-  /* font: inherit; */
 
   /**** Do not include this! ****/
   /* overflow-wrap:break-word/anywhere — Will create problems with arabic! */
@@ -45,41 +39,64 @@
   /* white-space-collapse:preserve-breaks — Same as with `white-space` */
 }
 
-html {
-  /* Allows container & scroll state queries to fallback to html container. If
-   *  there is no any other parental container the fallback will effectively
-   *  be just media query.
-   */
-  container-type: size scroll-state;
+svg {
+  overflow: revert-layer;
 }
 
-input,
-textarea {
-  display: block;
-}
-
-/* All visible embedded elements
- *  https://developer.mozilla.org/en-US/docs/Glossary/Replaced_elements
- */
+audio,
 canvas,
 embed,
 fencedframe,
 frame,
 iframe,
 img,
+input,
 object,
-video,
-input[type='image'] {
+select,
+svg,
+textarea,
+video {
   display: block;
-  max-inline-size: 100%;
-  max-block-size: 100%;
+}
 
+/* All visible replaced elements
+ *  https://developer.mozilla.org/en-US/docs/Glossary/Replaced_elements
+ */
+audio[controls],
+canvas,
+embed,
+fencedframe,
+frame,
+iframe,
+img,
+input[type='image'],
+object,
+video {
   /* For width/height attributes support. */
   width: revert-layer;
   height: revert-layer;
 
-  /* Has no effect on <iframe>, <embed>, and <fencedframe> elements. */
+  max-inline-size: 100%;
+  max-block-size: 100%;
+
+  /* Has no effect on <iframe>, <embed>, and <fencedframe> elements */
   object-fit: contain;
+}
+
+::placeholder {
+  color: currentColor;
+}
+
+::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+:root {
+  /* Allows container & scroll state queries to fallback to html container. If
+   *  there is no any other parental container the fallback will effectively
+   *  be just media query.
+   */
+  container-type: size scroll-state;
 }
 
 picture {
@@ -94,28 +111,18 @@ source {
   display: none;
 }
 
-/* Not for <textarea>! */
-input:placeholder-shown {
-  text-overflow: ellipsis;
+br {
+  /* Makes <br> to take zero vertical space */
+  display: contents;
 }
 
-/* Not for <textarea>! */
-input::placeholder {
-  -webkit-text-security: none;
-  overflow: hidden;
+/* Not for <textarea> because textarea may have multiline placeholder */
+input {
+  &::placeholder {
+    overflow: hidden;
+  }
 
-  /* In Chromium for some reason this should be specified in both
-   *  <input> and ::placeholder elements.
-   */
-  text-overflow: inherit;
+  &:placeholder-shown {
+    text-overflow: ellipsis;
+  }
 }
-
-/**** Consider ****/
-/*
-:where(button, input, select, textarea) {
-  font: inherit;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  color: currentColor;
-}
-*/

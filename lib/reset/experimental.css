@@ -1,0 +1,24 @@
+/* Apply this just for all elements, not messing with "all replaced" selector? */
+* {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+  object-fit: contain;
+}
+
+audio[controls],
+canvas,
+embed,
+fencedframe,
+frame,
+iframe,
+img,
+input[type='image'],
+object,
+video {
+  width: revert-layer;
+  height: revert-layer;
+
+  /* OR */
+
+  width: attr(width type(<length> | <percentage>), attr(width px, stretch));
+}
