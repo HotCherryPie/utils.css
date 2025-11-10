@@ -1,0 +1,25 @@
+/* WIP */
+
+/* Consider:
+ * -webkit-touch-callout:none
+ */
+
+a {
+  cursor: pointer;
+}
+
+:not(
+  textarea,
+  [contentEditable],
+  input:where(
+    [type='email'],
+    [type='number'],
+    [type='password'],
+    [type='search'],
+    [type='tel'],
+    [type='text'],
+    [type='url']
+  )
+) {
+  user-select: none;
+}
