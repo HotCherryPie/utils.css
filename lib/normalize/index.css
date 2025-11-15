@@ -1,11 +1,25 @@
 /* WIP */
 
+/* Useful links:
+ * - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/system-color
+ *
+ */
+
 /* Consider:
  * -webkit-touch-callout:none
  */
 
+:root {
+  accent-color: AccentColor;
+}
+
 a {
   cursor: pointer;
+  color: LinkText;
+
+  &:active {
+    color: ActiveText;
+  }
 }
 
 :not(
