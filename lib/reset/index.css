@@ -25,7 +25,7 @@
   flex-grow: 0;
   flex-shrink: 0;
   font-synthesis: none;
-  text-box: trim-both cap text;
+  text-box: trim-both cap alphabetic;
 
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
