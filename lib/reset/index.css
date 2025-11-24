@@ -30,13 +30,6 @@
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-
-  /**** Do not include this! ****/
-  /* overflow-wrap:break-word/anywhere — Will create problems with arabic! */
-  /* appearance:none — Included in all:unset */
-  /* list-style:none — Included in all:unset */
-  /* white-space:pre-line — Too many inconvenience with random newlines */
-  /* white-space-collapse:preserve-breaks — Same as with `white-space` */
 }
 
 svg {
@@ -111,11 +104,6 @@ source {
   display: none;
 }
 
-br {
-  /* Makes <br> to take zero vertical space */
-  display: contents;
-}
-
 /* Not for <textarea> because textarea may have multiline placeholder */
 input {
   &::placeholder {
@@ -126,3 +114,13 @@ input {
     text-overflow: ellipsis;
   }
 }
+
+/**** Do not include this! ****/
+
+/* overflow-wrap:break-word/anywhere — Will create problems with arabic! */
+/* appearance:none — Included in all:unset */
+/* list-style:none — Included in all:unset */
+/* white-space:pre-line — Too many inconvenience with random newlines */
+/* white-space-collapse:preserve-breaks — Same as with `white-space` */
+
+/* br { display: contents } — don't work */
