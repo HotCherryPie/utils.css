@@ -36,6 +36,12 @@ svg {
   overflow: revert-layer;
 }
 
+ul,
+ol {
+  list-style: none; /* Not included in `all:unset` */
+}
+
+li,
 audio,
 canvas,
 embed,
@@ -65,7 +71,7 @@ img,
 input[type='image'],
 object,
 video {
-  /* For width/height attributes support. */
+  /* For width/height attributes support */
   width: revert-layer;
   height: revert-layer;
 
@@ -117,9 +123,8 @@ input {
 
 /**** Do not include this! ****/
 
-/* overflow-wrap:break-word/anywhere — Will create problems with arabic! */
 /* appearance:none — Included in all:unset */
-/* list-style:none — Included in all:unset */
+/* overflow-wrap:break-word/anywhere — Will create problems with arabic */
 /* white-space:pre-line — Too many inconvenience with random newlines */
 /* white-space-collapse:preserve-breaks — Same as with `white-space` */
 
