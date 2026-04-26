@@ -22,7 +22,12 @@ a {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap-style: balance;
 }
 
@@ -30,9 +35,17 @@ p {
   text-wrap-style: pretty;
 }
 
+sup {
+  vertical-align: super;
+}
+
+sub {
+  vertical-align: sub;
+}
+
 :not(
   textarea,
-  [contentEditable],
+  [contenteditable],
   input:where(
     [type='email'],
     [type='number'],
