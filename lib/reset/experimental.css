@@ -22,3 +22,15 @@ video {
 
   width: attr(width type(<length> | <percentage>), attr(width px, stretch));
 }
+
+input:not(
+  [type='checkbox'],
+  [type='file'],
+  [type='image'],
+  [type='radio'],
+  [type='range']
+) {
+  font: inherit;
+  letter-spacing: inherit; /* Not included in `font` property */
+  word-spacing: inherit; /* Not included in `font` property */
+}
