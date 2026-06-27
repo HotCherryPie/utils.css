@@ -37,6 +37,7 @@
 }
 
 svg {
+  /* TODO: consider `visible` value */
   overflow: revert-layer;
 }
 
