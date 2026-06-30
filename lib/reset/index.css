@@ -3,11 +3,11 @@
  *  https://developer.mozilla.org/docs/Web/CSS/Reference/Selectors/Namespace_separator
  *
  * Possible namespaces:
- *  @namespace html    url('http://www.w3.org/1999/xhtml');
+ *  @namespace html    url("http://www.w3.org/1999/xhtml");
  *  @namespace svg     url("http://www.w3.org/2000/svg");
  *  @namespace mathml  url("http://www.w3.org/1998/Math/MathML");
  */
-@namespace url('http://www.w3.org/1999/xhtml');
+@namespace 'http://www.w3.org/1999/xhtml';
 
 /* #region Basic */
 /* Non inherited */
