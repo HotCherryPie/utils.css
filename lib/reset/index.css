@@ -55,9 +55,20 @@ img,
 input,
 object,
 select,
-svg,
+/* svg, */
 textarea,
 video {
+  display: block;
+}
+
+/* Special case for svg, since we are in HTML namespace */
+*|svg {
+  /* Forcing default display of `block`. Main reason for this is that SVG can
+   *  have different default `display` property value depending on context. Read
+   *  more here https://www.w3.org/TR/css-display-3/#transformations
+   * Take into account the fact that this style is not always applied because of
+   *  feature described above!
+   */
   display: block;
 }
 
