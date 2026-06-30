@@ -1,45 +1,43 @@
-/* References:
- * - https://jakelazaroff.com/words/my-modern-css-reset/
- * - https://github.com/fokus-dev/uaplus/blob/main/uaplus.css
- * - https://piccalil.li/blog/a-more-modern-css-reset/
- * - https://www.npmjs.com/package/the-new-css-reset
- * - https://www.npmjs.com/package/gardevoir
- * - https://www.npmjs.com/package/modern-normalize
- * - https://www.joshwcomeau.com/css/custom-css-reset/
- * - https://github.com/tailwindlabs/tailwindcss/blob/main/packages/tailwindcss/preflight.css
- * - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
- * - https://x.com/csswizardry/status/1717841334462005661
- *   https://youtu.be/345V2MU3E_w
- * - https://youtu.be/eWmDW4zEXt4
+/* Scopes styles in this file to html namespace only
+ *  https://developer.mozilla.org/docs/Web/CSS/Reference/At-rules/@namespace
+ *  https://developer.mozilla.org/docs/Web/CSS/Reference/Selectors/Namespace_separator
  *
- * - https://adrianroselli.com/2019/09/under-engineered-text-boxen.html
+ * Possible namespaces:
+ *  @namespace html    url('http://www.w3.org/1999/xhtml');
+ *  @namespace svg     url("http://www.w3.org/2000/svg");
+ *  @namespace mathml  url("http://www.w3.org/1998/Math/MathML");
  */
+@namespace url('http://www.w3.org/1999/xhtml');
 
-/* TODO: check for <use> element. */
-:not(math *, svg *),
+/* #region Basic */
+/* Non inherited */
+*,
 ::before,
 ::after {
   all: unset;
 
   display: revert-layer;
-  -webkit-locale: revert-layer; /* https://github.com/elad2412/the-new-css-reset/issues/36 */
 
   box-sizing: border-box;
   min-width: 0;
   flex-grow: 0;
   flex-shrink: 0;
-  font-synthesis: none;
   text-box: trim-both cap alphabetic;
+}
+
+/* Inherited */
+*,
+::before,
+::after {
+  -webkit-locale: revert-layer; /* https://github.com/elad2412/the-new-css-reset/issues/36 */
+
+  font-synthesis: none;
 
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
-
-svg {
-  /* TODO: consider `visible` value */
-  overflow: revert-layer;
-}
+/* #endregion Basic */
 
 ul,
 ol {

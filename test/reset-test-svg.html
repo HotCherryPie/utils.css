@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test SVG</title>
+
+    <style>
+      @layer reset;
+      @import url('../lib/reset/index.css') layer(reset);
+    </style>
+  </head>
+  <body style="display: grid; min-height: 100vh; place-items: center">
+    <div>Hello</div>
+
+    <svg viewBox="0 0 120 120" style="width: 64px" class="loader">
+      <defs>
+        <path
+          id="p"
+          stroke="currentColor"
+          stroke-width="14"
+          stroke-linecap="round"
+          d="M60 7v25"
+        ></path>
+      </defs>
+      <use
+        xlink:href="#p"
+        transform="rotate(-360 60 60)"
+        opacity="0"
+        style="animation-delay: 0s"
+      ></use>
+      <use
+        xlink:href="#p"
+        transform="rotate(-315 60 60)"
+        opacity="0"
+        style="animation-delay: 0.08s"
+      ></use>
+      <use
+        xlink:href="#p"
+        transform="rotate(-270 60 60)"
+        opacity="0"
+        style="animation-delay: 0.16s"
+      ></use>
+      <use
+        xlink:href="#p"
+        transform="rotate(-225 60 60)"
+        opacity="0"
+        style="animation-delay: 0.24s"
+      ></use>
+      <use
+        xlink:href="#p"
+        transform="rotate(-180 60 60)"
+        opacity="0"
+        style="animation-delay: 0.32s"
+      ></use>
+      <use
+        xlink:href="#p"
+        transform="rotate(-135 60 60)"
+        opacity="0"
+        style="animation-delay: 0.4s"
+      ></use>
+      <use
+        xlink:href="#p"
+        transform="rotate(-90 60 60)"
+        opacity="0"
+        style="animation-delay: 0.48s"
+      ></use>
+      <use
+        xlink:href="#p"
+        transform="rotate(-45 60 60)"
+        opacity="0"
+        style="animation-delay: 0.56s"
+      ></use>
+    </svg>
+
+    <style>
+      .loader {
+        > use {
+          --color-from: hsl(350deg 100% 55% / 100%);
+          --color-to: hsl(350deg 0% 55% / 40%);
+          animation: spin 0.64s infinite ease-out;
+        }
+      }
+
+      @keyframes spin {
+        from {
+          color: var(--color-to);
+          opacity: 1;
+        }
+        10% {
+          color: var(--color-from);
+          opacity: 1;
+        }
+        75% {
+          color: var(--color-to);
+          opacity: 1;
+        }
+        to {
+          color: var(--color-to);
+          opacity: 1;
+        }
+      }
+    </style>
+  </body>
+</html>
