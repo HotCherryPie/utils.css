@@ -22,10 +22,18 @@
   min-width: 0;
   flex-grow: 0;
   flex-shrink: 0;
+
+  /* TODO: consider applying this exclusively to <p> element (and maybe some other) */
+  /* Creates problems when applied to img/svg and other replaced elements
+   *  because it inherits height of current font ang ignore their own height.
+   */
   text-box: trim-both cap alphabetic;
 }
 
 /* Inherited */
+/* Cant be moved to html styles, because `all: unset` applies to all elements
+ *  so should this styles too.
+ */
 *,
 ::before,
 ::after {

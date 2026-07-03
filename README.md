@@ -11,6 +11,8 @@
 
 ## Prior Art
 
+#### Reset
+
 - https://jakelazaroff.com/words/my-modern-css-reset/
 - https://github.com/fokus-dev/uaplus/blob/main/uaplus.css
 - https://piccalil.li/blog/a-more-modern-css-reset/
@@ -21,7 +23,9 @@
 - https://github.com/tailwindlabs/tailwindcss/blob/main/packages/tailwindcss/preflight.css
 - https://github.com/jensimmons/cssremedy/blob/master/css/remedy.css
 
-* https://x.com/csswizardry/status/1717841334462005661
-* https://youtu.be/345V2MU3E_w
-* https://youtu.be/eWmDW4zEXt4
-* https://adrianroselli.com/2019/09/under-engineered-text-boxen.html
+#### Normalize
+
+- https://x.com/csswizardry/status/1717841334462005661
+- https://youtu.be/345V2MU3E_w
+- https://youtu.be/eWmDW4zEXt4
+- https://adrianroselli.com/2019/09/under-engineered-text-boxen.html

@@ -9,8 +9,20 @@
  * -webkit-touch-callout:none
  */
 
-:root {
+html {
   accent-color: AccentColor;
+  font-family: system-ui, sans-serif;
+}
+
+code,
+pre {
+  font-family: monospace;
+}
+
+code,
+pre,
+a {
+  font-variant-emoji: text;
 }
 
 a {
