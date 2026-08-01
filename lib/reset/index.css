@@ -22,12 +22,6 @@
   min-width: 0;
   flex-grow: 0;
   flex-shrink: 0;
-
-  /* TODO: consider applying this exclusively to <p> element (and maybe some other) */
-  /* Creates problems when applied to img/svg and other replaced elements
-   *  because it inherits height of current font ang ignore their own height.
-   */
-  text-box: trim-both cap alphabetic;
 }
 
 /* Inherited */
@@ -149,5 +143,11 @@ input {
 /* overflow-wrap:break-word/anywhere — Will create problems with arabic */
 /* white-space:pre-line — Too many inconvenience with random newlines */
 /* white-space-collapse:preserve-breaks — Same as with `white-space` */
+
+/* text-box: ... — Creates problems when applied to img/svg and other replaced
+ *  elements because it inherits height of current font ang ignore their own
+ *  height. Also creates problems with blocks where inner elements have have
+ *  em/rem size.
+ */
 
 /* br { display: contents } — don't work */
